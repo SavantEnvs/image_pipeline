@@ -1,0 +1,9 @@
+project: savantenvs/image_pipeline
+target: fuzz_edge_aware_debayer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_edge_aware_debayer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_edge_aware_debayer
+    libfuzzer: true
+    timeout: 30
